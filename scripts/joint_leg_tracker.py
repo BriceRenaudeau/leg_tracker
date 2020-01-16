@@ -77,9 +77,11 @@ class ObjectTracked:
         elif scan_frequency > 9.99 and scan_frequency < 10.01:
             std_process_noise = 0.05
         elif scan_frequency > 14.99 and scan_frequency < 15.01:
-            std_process_noise = 0.03333
+            std_process_noise = 0.03333            
+        elif scan_frequency > 19.99 and scan_frequency < 20.01:
+            std_process_noise = 0.025
         else:
-            print "Scan frequency needs to be either 7.5, 10 or 15 or the standard deviation of the process noise needs to be tuned to your scanner frequency"
+            print "Scan frequency needs to be either 7.5, 10, 15 or 20 or the standard deviation of the process noise needs to be tuned to your scanner frequency"
         std_pos = std_process_noise
         std_vel = std_process_noise
         std_obs = 0.1

@@ -161,7 +161,7 @@ public:
               i++)
           {
             visualization_msgs::Marker m;
-            m.header.frame_id = "laser_frame";
+            m.header.frame_id = laser_frame_;
             m.ns = "LEGS";
             m.id = i;
             m.type = m.SPHERE;
