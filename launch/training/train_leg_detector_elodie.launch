@@ -10,12 +10,21 @@
 
   <arg name="neg_bag_1" value="/home/brice/bags/elodie/mapping/mappingData_2019-11-15_14-32-26.bag" />
   <arg name="neg_bag_2" value="/home/brice/bags/elodie/mapping/mappingData_2019-11-18_11-40-19.bag" />
+  <arg name="neg_bag_3" value="/home/brice/bags/elodie/mapping/mappingData_2019-11-27_11-41-10.bag" />
+  <arg name="neg_bag_4" value="/home/brice/bags/elodie/mapping/mappingData_2019-11-27_11-49-05.bag" />
   <arg name="neg_scan_topic" value="/scan" />
+
+  <arg name="test_neg_bag" value="/home/brice/bags/elodie/mapping/mappingData_2019-11-19_16-18-31.bag" />
+  <arg name="test_pos_bag" value="/home/brice/bags/elodie/mapping/leg_extracted_2h.bag" />
 
   <node pkg="leg_tracker" type="train_leg_detector" name="train_leg_detector" required="true"
         args="--pos $(arg pos_bag_1) $(arg pos_scan_topic)
               --neg $(arg neg_bag_1) $(arg neg_scan_topic)
               --neg $(arg neg_bag_2) $(arg neg_scan_topic)
+              --neg $(arg neg_bag_3) $(arg neg_scan_topic)
+              --neg $(arg neg_bag_4) $(arg neg_scan_topic)
+              --test_pos $(arg test_pos_bag) $(arg pos_scan_topic)
+              --test_neg $(arg test_neg_bag) $(arg neg_scan_topic)
               --save_file $(arg save_file)" 
               output="screen"/> 
 </launch>
