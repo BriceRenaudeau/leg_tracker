@@ -146,6 +146,12 @@ public:
   void removeLessThan(uint32_t num);
 
   /**
+  * @brief Remove and delete all references to scan clusters more than a minimum size
+  * @param num Maximum number of points in cluster
+  */
+  void removeMoreThan(uint32_t num);
+
+  /**
   * @brief Split scan into clusters
   * @param thresh Euclidian distance threshold for clustering
   */
